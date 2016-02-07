@@ -11,8 +11,8 @@ exports.load = function(server, boatData, settings) {
         setInterval(function() {
             barometer.readPressureAndTemparature(function(err, pressure, temperature) {
                 boatData.broadcast({
-                    type: 'data',
-                    subtype: 'env',
+                    type: 'DATA',
+                    subtype: 'ENV',
                     values: [
                         "P",
                         pressure,
